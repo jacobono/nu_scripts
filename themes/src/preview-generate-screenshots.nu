@@ -24,7 +24,7 @@ def save_screenshot [ method, theme_name ] {
     "powershell" => {
       let ps_script = $"
         use .. *
-        source ($name)
+        source ($theme_name)
         clear
         sleep 100ms
         print `Theme name: '($theme_name)'`
@@ -50,7 +50,7 @@ def save_screenshot [ method, theme_name ] {
     "minicap" => {
       $'
         use .. *
-        source ($name)
+        source ($theme_name)
         clear
         sleep 100ms
         print `Theme name: '($theme_name)'`
